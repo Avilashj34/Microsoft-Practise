@@ -1,0 +1,11 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.Business.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.Business.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.DataAcess.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.ViewModel.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.DataAcess.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.DataAcess.dll.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\bin\Debug\ShoppingCart.ViewModel.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\obj\Debug\ShoppingCart.Business.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\obj\Debug\ShoppingCart.Business.csproj.CopyComplete
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\obj\Debug\ShoppingCart.Business.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.Business\obj\Debug\ShoppingCart.Business.pdb

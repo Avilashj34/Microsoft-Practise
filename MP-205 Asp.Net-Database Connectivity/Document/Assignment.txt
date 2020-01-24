@@ -1,0 +1,9 @@
+Assignment1-Basic
+Create console application for below programs.
+	
+C# Program to swap two numbers without third variable.
+	Write a program to achieve Single Level Inheritance.
+	Write a program to achieve Method Overloading or Method Overriding. 
+	Create a program to achieve C# different types of collections.
+	Create a program to different types of access modifier for checking accessibility.
+	Create a program to different types looping statements in c#.

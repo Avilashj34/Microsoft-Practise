@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="padding-top:20px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <td colspan="2">
+                            <b>Existing User Login</b>
+                            <a class="btn btn-success pull-right" href="Register.html">Register</a> 
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" id="txtUserName" placeholder="Email" required /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" id="txtPassword" placeholder="Password" /></td>
+                    </tr>                   
+                    <tr class="success">
+                        <td colspan="2">
+                            <input type="button" class="btn btn-success" id="btnLogin" value="Login" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <th>
+                            Google Login
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="button" id="btnGoogleLogin"
+                                   value="Login with Google" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+            
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#"> &times;</a>
+                <div id="divErrorText">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#btnGoogleLogin').click(function () {
+                window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A44351%2FLogin.html&state=GerGr5JlYx4t_KpsK57GFSxVueteyBunu02xJTak5m01";
+            });
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+            $('#btnLogin').click(function () {
+                $.ajax({
+                    url: '/account/token',
+                    method: 'POST',
+                    contentType:'application/json',
+                    data: {
+                        //their should be username and password name only else the context will not be able to get data 
+                        username: $('#txtUserName').val(),
+                        password: $('#txtPassword').val(),
+                        grant_type: 'password'
+                    },
+                    success: function (response) {
+                        sessionStorage.setItem("accessToken", response.access_token);
+                        //templateUrl: 'Physician/Index'
+                        window.location.href ="Data.html";
+                        //window.location.href = "Physician/Index.cshtml"; @Url.Action("Index","Physician")
+                        /*$('#divErrorText').text(JSON.stringify(response));
+                        $('#divError').show('fade');*/
+                    },
+                    error: function (jqXHR) {
+                        $('#divErrorText').text(jqXHR.responseText);
+                        $('#divError').show('fade');
+                    }
+                });
+                /*$('#divErrorText').text("click on login")
+                $('#divError').show('fade');*/
+            });
+
+
+
+        });
+
+
+    </script>
+</body>
+</html>

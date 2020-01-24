@@ -1,0 +1,12 @@
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll.config
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
+C:\Users\Avilash.Jha\source\repos\WebApiCRUD\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb

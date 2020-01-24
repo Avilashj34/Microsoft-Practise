@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Loan_Account">
+    <Key>
+      <PropertyRef Name="Loan_AccountNo" />
+    </Key>
+    <Property Name="Loan_AccountNo" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="LoanAmount" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="Loan_Term" Type="int" />
+    <Property Name="Loan_Int_Type" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Saving_Account">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="AccountNo" Type="int" Nullable="false" />
+    <Property Name="BranchCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="CurrentBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="Cust_Pkey1">
+    <End Role="Saving_Account" Type="Self.Saving_Account" Multiplicity="0..1" />
+    <End Role="Loan_Account" Type="Self.Loan_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saving_Account">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Loan_Account">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BankDbModelStoreContainer">
+    <EntitySet Name="Loan_Account" EntityType="Self.Loan_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saving_Account" EntityType="Self.Saving_Account" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Cust_Pkey1" Association="Self.Cust_Pkey1">
+      <End Role="Saving_Account" EntitySet="Saving_Account" />
+      <End Role="Loan_Account" EntitySet="Loan_Account" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

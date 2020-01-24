@@ -1,0 +1,7 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\bin\Debug\Assignment1-Generics.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\bin\Debug\Assignment1-Generics.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\bin\Debug\Assignment1-Generics.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\obj\Debug\Assignment1-Generics.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\obj\Debug\Assignment1-Generics.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\obj\Debug\Assignment1-Generics.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Generics\obj\Debug\Assignment1-Generics.pdb

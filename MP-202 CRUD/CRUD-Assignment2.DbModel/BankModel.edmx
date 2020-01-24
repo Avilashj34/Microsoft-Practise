@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BankDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Loan_Account">
+          <Key>
+            <PropertyRef Name="Loan_AccountNo" />
+          </Key>
+          <Property Name="Loan_AccountNo" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="LoanAmount" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="Loan_Term" Type="int" />
+          <Property Name="Loan_Int_Type" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Saving_Account">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="AccountNo" Type="int" Nullable="false" />
+          <Property Name="BranchCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="varchar" MaxLength="20" />
+          <Property Name="CurrentBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <Association Name="Cust_Pkey1">
+          <End Role="Saving_Account" Type="Self.Saving_Account" Multiplicity="0..1" />
+          <End Role="Loan_Account" Type="Self.Loan_Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Saving_Account">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Loan_Account">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BankDbModelStoreContainer">
+          <EntitySet Name="Loan_Account" EntityType="Self.Loan_Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Saving_Account" EntityType="Self.Saving_Account" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Cust_Pkey1" Association="Self.Cust_Pkey1">
+            <End Role="Saving_Account" EntitySet="Saving_Account" />
+            <End Role="Loan_Account" EntitySet="Loan_Account" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BankDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Loan_Account">
+          <Key>
+            <PropertyRef Name="Loan_AccountNo" />
+          </Key>
+          <Property Name="Loan_AccountNo" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="LoanAmount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="Loan_Term" Type="Int32" />
+          <Property Name="Loan_Int_Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Saving_Account" Relationship="Self.Cust_Pkey1" FromRole="Loan_Account" ToRole="Saving_Account" />
+        </EntityType>
+        <EntityType Name="Saving_Account">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNo" Type="Int32" Nullable="false" />
+          <Property Name="BranchCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CurrentBalance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Loan_Account" Relationship="Self.Cust_Pkey1" FromRole="Saving_Account" ToRole="Loan_Account" />
+        </EntityType>
+        <Association Name="Cust_Pkey1">
+          <End Role="Saving_Account" Type="Self.Saving_Account" Multiplicity="0..1" />
+          <End Role="Loan_Account" Type="Self.Loan_Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Saving_Account">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="Loan_Account">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BankDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Loan_Account" EntityType="Self.Loan_Account" />
+          <EntitySet Name="Saving_Account" EntityType="Self.Saving_Account" />
+          <AssociationSet Name="Cust_Pkey1" Association="Self.Cust_Pkey1">
+            <End Role="Saving_Account" EntitySet="Saving_Account" />
+            <End Role="Loan_Account" EntitySet="Loan_Account" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BankDbModelStoreContainer" CdmEntityContainer="BankDbEntities">
+          <EntitySetMapping Name="Loan_Account">
+            <EntityTypeMapping TypeName="BankDbModel.Loan_Account">
+              <MappingFragment StoreEntitySet="Loan_Account">
+                <ScalarProperty Name="Loan_AccountNo" ColumnName="Loan_AccountNo" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+                <ScalarProperty Name="Loan_Term" ColumnName="Loan_Term" />
+                <ScalarProperty Name="Loan_Int_Type" ColumnName="Loan_Int_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saving_Account">
+            <EntityTypeMapping TypeName="BankDbModel.Saving_Account">
+              <MappingFragment StoreEntitySet="Saving_Account">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

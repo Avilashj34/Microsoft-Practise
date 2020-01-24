@@ -1,0 +1,55 @@
+﻿@using ShoppingCart.ViewModel;
+@model Dictionary<int, CartView>
+
+@{
+    ViewBag.Title = "MoveToCart";
+    int total = 0;
+}
+
+<h2>MoveToCart</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Key
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+           
+        </tr>
+    </thead>
+    @foreach (KeyValuePair<int, CartView> item in this.Model)
+    {
+        
+        <tr>
+            <td>
+                @item.Key
+            </td>
+
+            <td>
+                @item.Value.Name
+            </td>
+            <td>
+                @item.Value.Price
+            </td>
+            <td>
+                @item.Value.Quantity
+            </td>            
+                @{
+                    total= total + @item.Value.Price;
+                }                            
+        </tr>
+    }
+</table>
+<div>
+    Your Bill amount is : @total
+</div>
+
+

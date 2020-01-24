@@ -1,0 +1,63 @@
+﻿@model Assignment6_ASP.Net_MVC.Models.Customer
+
+@{
+    ViewBag.Title = "ShowDetailById";
+}
+<html>
+<head>
+    <title>Customer Detail By Id</title>
+    <style>
+        h2{
+            text-align: center;
+            color: burlywood;
+        }
+        table th{
+            
+            padding: 4px 30px 4px 8px;
+        }
+        table tr{
+            padding : 4px 8px 4px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Show Customer Detail By Id</h2>
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Name)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Address)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.MobileNo)</th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MobileNo)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Birthdate)</th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Birthdate)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.EmailID)</th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.EmailID)
+            </td>
+        </tr>
+
+        
+        <tr>
+        </tr>
+    </table>
+</body>
+</html>
+

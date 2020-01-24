@@ -1,0 +1,120 @@
+﻿@model Assignment6_ASP.Net_MVC.Models.Customer
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <html>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Delete</title>
+        <style>
+            .display-label{
+                font-weight: bold;
+                display:inline-block;
+            }
+
+            .display-field{
+                
+               display:inline-block;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h3>Are you sure you want to delete this?</h3>
+
+        @using (Html.BeginForm())
+
+        {
+
+    <fieldset>
+        <legend>Customer Detail</legend>
+        @Html.HiddenFor(model => model.CustomerID)
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Name)
+        </div>
+
+        <div class="display-field">
+
+            @Html.DisplayFor(model => model.Name)
+
+        </div>
+        <br />
+
+        <div class="display-label">
+
+            @Html.DisplayNameFor(model => model.Address)
+
+        </div>
+
+        <div class="display-field">
+
+            @Html.DisplayFor(model => model.Address)
+
+        </div>
+
+        <br />
+
+        <div class="display-label">
+
+            @Html.DisplayNameFor(model => model.MobileNo)
+
+        </div>
+
+        <div class="display-field">
+
+            @Html.DisplayFor(model => model.MobileNo)
+
+        </div>
+
+        <br />
+
+        <div class="display-label">
+
+            @Html.DisplayNameFor(model => model.Birthdate)
+
+        </div>
+
+        <div class="display-field">
+
+            @Html.DisplayFor(model => model.Birthdate)
+
+        </div>
+
+        <br />
+
+        <div class="display-label">
+
+            @Html.DisplayNameFor(model => model.EmailID)
+
+        </div>
+
+        <div class="display-field">
+
+            @Html.DisplayFor(model => model.EmailID)
+
+        </div>
+
+    </fieldset>
+
+            <p>
+
+                <input id="Submit1" onclick="return confirm('Are you sure you want delete');"
+                       type="submit" value="Delete" />|
+
+                @Html.ActionLink("Back to List", "Index")
+
+            </p>
+
+        }
+
+    </body>
+
+    </html>
+

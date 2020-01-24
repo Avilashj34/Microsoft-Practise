@@ -1,0 +1,14 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\bin\Debug\Assignment1-Collection.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\bin\Debug\Assignment1-Collection.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\bin\Debug\Assignment1-Collection.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Collection.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Collection.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Collection.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Collection.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\bin\Debug\Assignment1-Collection.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\bin\Debug\Assignment1-Collection.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\bin\Debug\Assignment1-Collection.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\obj\Debug\Assignment1-Collection.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\obj\Debug\Assignment1-Collection.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\obj\Debug\Assignment1-Collection.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-Collection\obj\Debug\Assignment1-Collection.pdb

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Welcome Page</h2>
+
+    @ViewBag.Msg
+
+<h1>
+</h1>
+
+@Html.ActionLink("Add Customer", "InsertCustomer")
+@Html.ActionLink("Show List Of Customer", "ShowAllCustomerDetail")
+<br />
+<br />
+@using (Html.BeginForm("ShowDetailById", "Customer", FormMethod.Get))
+{
+    @Html.TextBox("search")
+    <input type="submit" value="Search" />
+}
+
+

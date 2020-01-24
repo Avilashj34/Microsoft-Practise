@@ -1,0 +1,400 @@
+﻿@model HospitalSystem_Core.ViewModels.RegisterVm;
+
+
+@{
+    //ViewData["Title"] = "Register";
+    Layout = "";
+    //ref : https://bootsnipp.com/snippets/dlZAN
+    // use two @@ to use in css line 79
+    var result = @ViewBag.Success;
+}
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="~/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .register {
+            background: -webkit-linear-gradient(left,#3931af,#00c6ff);
+            margin-top: 3%;
+            padding: 3%
+        }
+
+        .register-left {
+            text-align: center;
+            color: #fff;
+            margin-top: 4%;
+        }
+
+        .register-left a {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            width: 60%;
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #383d41;
+            margin-top: 30%;
+            margin-bottom: 3%;
+            cursor: pointer;
+        }
+
+        .register-right {
+            background: #f8f9fa;
+            border-top-left-radius: 10% 50%;
+            border-bottom-left-radius: 10% 50%;
+        }
+
+        .register-left img {
+            margin-top: 15%;
+            margin-bottom: 15%;
+            width: 25%;
+            -webkit-animation: mover 2s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        .register-left p {
+            font-weight: lighter;
+            padding: 12%;
+            margin-top: -9%;
+        }
+
+        .register .register-form {
+            padding: 10%;
+            margin-top: 10%;
+        }
+
+        .btnRegister {
+            float: right;
+            margin-top: 10%;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            background: #0062cc;
+            color: #fff;
+            font-weight: 600;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        @@-webkit-keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @@keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .register .nav-tabs {
+            margin-top: 3%;
+            border: none;
+            background: #0062cc;
+            border-radius: 1.5rem;
+            width: 28%;
+            float: right;
+        }
+
+        .register .nav-tabs .nav-link {
+            padding: 2%;
+            height: 34px;
+            font-weight: 600;
+            color: #fff;
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+
+        .register .nav-tabs .nav-link:hover {
+            border: none;
+        }
+
+        .register .nav-tabs .nav-link.active {
+            width: 100px;
+            color: #0062cc;
+            border: 2px solid #0062cc;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+
+        .register-heading {
+            text-align: center;
+            margin-top: 8%;
+            margin-bottom: -15%;
+            color: #495057;
+        }
+        .btncls{             
+            height: 34px;
+            margin-top: 120px;
+            background: #0066CC;
+        }
+
+        .btn-resend{
+            background: white;
+            transition: none;
+            border: none;
+            font-size: 15px;
+            color : #007BFF;
+        }
+        
+    </style>
+</head>
+<body>
+    <center><h3><b style="color: darkred">@ViewBag.Message</b></h3></center>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="~/src/logo_white_airplane.png" alt="Airplane" />
+                <h3>Welcome to </h3>
+                <p>Our Portal</p>
+                @if (result != "IsTrue")
+                {
+                    <a href="http://localhost:58489/User/LoginUser">Login here</a>
+                }
+                else
+                {
+                    <a href="http://localhost:58489/User/RegisterUser">Register here</a>
+                }
+                
+
+            </div>
+
+            <div class="col-md-9 register-right">
+                @if (result != "IsTrue")
+                {
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Admin</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading"> Apply as a User</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <form asp-action="RegisterUser">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="Name" class="control-label"></label>
+                                            <input asp-for="Name" class="form-control" id="name" disabled />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Phone" class="control-label"></label>
+                                            <input asp-for="Phone" id="phone" class="form-control"  />
+                                            <span asp-validation-for="Phone" class="text-danger" ></span>
+                                            <span style="float:right"><a href="User/RegisterUser" id="get_otp"  >Get Otp</a></span>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="OTP" class="control-label">Enter Otp</label>
+                                            <input asp-for="OTP" class="form-control" id="otp" disabled />
+                                            <span asp-validation-for="OTP" class="text-danger"></span>
+                                            <span  style="float:right;">
+                                                <a href="User/SendOtp" id="resendotp" style="color : #007BFF"> Resend Otp?</a>
+                                            </span>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input asp-for="Password" class="form-control" id="password" disabled />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                            <input type="checkbox" onclick="show_Password()" /> Show Password
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="ConfirmPassword" class="control-label"></label>
+                                            <input asp-for="ConfirmPassword" class="form-control" id="cpassword" disabled />
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                            <input type="checkbox" onclick="show_Confirm_Password()" /> Show Password
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Create" class="btnRegister" id="submit" disabled />
+                                        </div>
+                                    </form>
+
+                                </div>
+                                @*<input type="button" value="Get Otp" class="btncls" onclick="sendOtp()" />*@
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <h3 class="register-heading"> Apply as a Admin</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <form>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="Name" class="control-label"></label>
+                                            <input asp-for="Name" class="form-control" disabled />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Phone" class="control-label"></label>
+                                            <input asp-for="Phone" class="form-control"  disabled/>
+                                            <span asp-validation-for="Phone" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input asp-for="Password" class="form-control"  disabled/>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Submit" class="btnRegister" id="admin_alert" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User Login</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading"> Login Here</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+
+                                    <form asp-action="LoginUser">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="Phone" class="control-label"></label>
+                                            <input asp-for="Phone" class="form-control" />
+                                            <span asp-validation-for="Phone" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input asp-for="Password" class="form-control" id="password"/>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                            <input type="checkbox" onclick="show_Password()" /> Show Password
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Login" class="btnRegister" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function check_validation() {
+            password = document.getElementById("password").value;
+            console.log(password);
+            regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@$!%*?&])[A-Za-z\d@@$!%*?&]{8,}$/;
+            if (regex.exec(password)) {
+                alert('sucessfull');
+            }
+            else {
+                alert('Enter again');
+            }
+        }
+
+        function sendOtp() {
+            var number = document.getElementById("phone").value
+            
+            $("#otp").prop('disabled', false);
+            $("#name").prop('disabled', false);
+            $("#phone").prop('readonly', true);
+            
+            $("#password").prop('disabled', false);
+            $("#cpassword").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+            
+            $.ajax({
+                url: 'http://localhost:58489/User/SendOtp/?number=' + number + '',
+                type: "post",               
+                success: function (data) {
+                    alert("OTP sent successfully. Please Enter the Otp ");                   
+                }                
+            });
+        }
+
+        function show_Password() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+
+        function show_Confirm_Password() {
+            var x = document.getElementById("cpassword");
+            if (x.type === "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+
+        document.getElementById("admin_alert").addEventListener("click", function (event) {
+            event.preventDefault()
+            alert('The Page is Under Construction ');
+        });
+        
+        document.getElementById("get_otp").addEventListener("click", function (event) {
+            event.preventDefault()
+            var number = document.getElementById("phone").value;
+            
+            $("#otp").prop('disabled', false);
+            $("#name").prop('disabled', false);
+            $("#phone").prop('readonly', true);
+            
+            $("#password").prop('disabled', false);
+            $("#cpassword").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+             $.ajax({
+                url: 'http://localhost:58489/User/SendOtp/?number=' + number + '',
+                type: "post",               
+                success: function (data) {
+                     alert("OTP sent successfully. Please Enter the Otp ");
+                 }
+                
+            });
+        });
+
+        document.getElementById("resendotp").addEventListener("click", function (event) {
+            event.preventDefault()
+            var number = document.getElementById("phone").value;
+             $.ajax({
+                url: 'http://localhost:58489/User/SendOtp/?number=' + number + '',
+                type: "post",               
+                 success: function (data) { 
+                     alert("OTP sent successfully.");                   
+                }                
+            });
+        });
+    </script>
+</body>
+</html>
+
+

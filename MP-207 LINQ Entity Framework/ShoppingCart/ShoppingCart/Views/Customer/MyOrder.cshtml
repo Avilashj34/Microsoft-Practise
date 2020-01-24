@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ShoppingCart.ViewModel.CustomerOrder>
+
+@{
+    ViewBag.Title = "MyOrder";
+}
+
+<h2>@TempData["Message"] Order</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <b>Product Name </b>  @Html.DisplayFor(modelitem => item.ProductName)<br />
+        <b>Pice</b>@Html.DisplayFor(modelitem => item.Price)<br />
+        <b>Quantity</b>@Html.DisplayFor(modelitem => item.Quantity)<br />
+        <b>DateTime</b>@Html.DisplayFor(modelitem => item.Datetime)<br />
+        <br />
+
+        <br />
+    }
+</div>
+

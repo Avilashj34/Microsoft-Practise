@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ShoppingCart.ViewModel.CustomerOrderView>
+
+
+@{
+    ViewBag.Title = "CustomerOrderProduct";
+    
+    
+}
+
+<h2>List Of Product Ordered by Customer</h2>
+&nbsp;
+&nbsp;
+<div class="container">
+    @foreach (var data in Model)
+    {
+    <h4><b>@Html.DisplayFor(modelitem => data.UserName) </b>order &nbsp;<br /><br />
+    The Number Of Order from @Html.DisplayFor(modelitem => data.UserName) is <b>@Html.DisplayFor(modelitem => data.Count)</b></h4>
+        <table class="table table-bordered table-hover table-responsive ">
+            <thead class="active">
+                <tr>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        ProductName
+                    </th>
+                    <th>
+                        Price 
+                    </th>
+                    <th>
+                       DateTime
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            @foreach (var item in data.CustomerOrders)
+            {
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Datetime)</td>
+                        <td>@Html.ActionLink("Accept","Accept","Home1")/@Html.ActionLink("Reject","Reject","Home1")</td>
+                    </tr>
+                </tbody>
+            }
+            </table>
+        
+    }
+    <table class="table">
+        <thead>
+
+        </thead>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "AdminDashboard", "Home1")
+</p>
+

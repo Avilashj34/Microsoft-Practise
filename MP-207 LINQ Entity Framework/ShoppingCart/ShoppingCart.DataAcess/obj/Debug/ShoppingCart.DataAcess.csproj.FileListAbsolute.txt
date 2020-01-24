@@ -1,0 +1,9 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\bin\Debug\ShoppingCart.DataAcess.dll.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\bin\Debug\ShoppingCart.DataAcess.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\bin\Debug\ShoppingCart.DataAcess.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\bin\Debug\ShoppingCart.ViewModel.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\bin\Debug\ShoppingCart.ViewModel.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\obj\Debug\ShoppingCart.DataAcess.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\obj\Debug\ShoppingCart.DataAcess.csproj.CopyComplete
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\obj\Debug\ShoppingCart.DataAcess.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.DataAcess\obj\Debug\ShoppingCart.DataAcess.pdb

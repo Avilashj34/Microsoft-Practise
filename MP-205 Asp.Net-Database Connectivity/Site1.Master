@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Asp.Net_Database_Connectivity.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        #header{
+            color :aqua;
+            font-size : 20px;
+        }
+        #nav{
+            background-color : mediumaquamarine;
+            padding: 7px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li a{
+            color : black;
+            font-size: 30px;
+        }
+        li{
+            display: inline;
+            padding-left:2px;
+            column-width:20px;
+        }
+        a{
+            text-decoration: dotted;
+            margin-left : 20px
+        }
+        li a:hover{
+            background-color : #F3FFBD;
+            color: #FF1654;
+            padding:1%;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" enctype="multipart/form-data" runat="server">
+    <header id ="header">
+        <nav id="nav">  
+            <ul>  
+                <li><asp:LinkButton ID="Home" runat="server" OnClick="Home_Click">Home</asp:LinkButton></li>  
+                <li><asp:LinkButton ID="Showprofile" runat="server" OnClick="Showprofile_Click">Show Profile</asp:LinkButton></li>
+                <li>
+                    <asp:LinkButton ID="UpdateDocument" runat="server" OnClick="UpdateDocument_Click">Update Document</asp:LinkButton>
+                    <asp:LinkButton ID="Showrecord" runat="server" OnClick="Showrecord_Click">Show Record</asp:LinkButton></li>  
+                <li><asp:LinkButton ID="logoutbutton"  runat="server" OnClick="logoutbutton_Click">Logout</asp:LinkButton></li>  
+                
+            </ul>  
+        </nav> 
+    </header>
+        <div>
+                <br />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <br />
+    </form>
+</body>
+</html>

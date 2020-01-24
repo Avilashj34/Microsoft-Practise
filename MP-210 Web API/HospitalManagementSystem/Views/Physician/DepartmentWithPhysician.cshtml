@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HospitalManagementSystem.Models.ViewModel.DepartmentViewModel>
+
+@{
+    ViewBag.Title = "DepartmentWithPhysician";
+}
+
+<h2>DepartmentWithPhysician</h2>
+
+<div class="container-fluid">
+    @foreach (var key in Model)
+    {
+    <h4>The Physician in <b>@key.DepartmentName</b> is <b> @key.Count_Dept</b></h4>
+       foreach (var keydata in key.physicianList)
+        {
+        
+        <ol>
+            <li>
+                @keydata.PhysicianName
+            </li>
+            <li>
+                @keydata.PhysicianPosition
+            </li>
+            <li>
+                @keydata.PhysicianSSN
+            </li>
+        </ol>
+        }
+    }
+</div>

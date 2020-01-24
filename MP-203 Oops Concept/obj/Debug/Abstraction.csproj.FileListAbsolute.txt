@@ -1,0 +1,7 @@
+C:\Users\Avilash.Jha\source\repos\OopsConcept\bin\Debug\OopsConcept.exe.config
+C:\Users\Avilash.Jha\source\repos\OopsConcept\bin\Debug\OopsConcept.exe
+C:\Users\Avilash.Jha\source\repos\OopsConcept\bin\Debug\OopsConcept.pdb
+C:\Users\Avilash.Jha\source\repos\OopsConcept\obj\Debug\Abstraction.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\source\repos\OopsConcept\obj\Debug\Abstraction.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\source\repos\OopsConcept\obj\Debug\OopsConcept.exe
+C:\Users\Avilash.Jha\source\repos\OopsConcept\obj\Debug\OopsConcept.pdb

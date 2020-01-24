@@ -1,0 +1,5 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.ViewModel\bin\Debug\ShoppingCart.ViewModel.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.ViewModel\bin\Debug\ShoppingCart.ViewModel.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.ViewModel\obj\Debug\ShoppingCart.ViewModel.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.ViewModel\obj\Debug\ShoppingCart.ViewModel.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\ShoppingCart\ShoppingCart.ViewModel\obj\Debug\ShoppingCart.ViewModel.csprojAssemblyReference.cache

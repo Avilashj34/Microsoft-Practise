@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Avi-Package</id>
+    <version>1.0.0</version>
+    <authors>Avilash.Jha</authors>
+    <owners>Avilash.Jha</owners>
+    <licenseUrl>https://github.com/HoussemDellai/social-media-templates/</licenseUrl>
+    <projectUrl>https://github.com/HoussemDellai/social-media-templates/</projectUrl>
+    <iconUrl>https://github.com/HoussemDellai/social-media-templates/blob/master/Icons/youtube-printscreen.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="2.2.29" />
+      <dependency id="Newtonsoft.Json" version="8.0.3" />
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="Nuget-MyPackage\HttpClass.cs" target="Content\HttpClass1.cs"></file>
+  </files>
+</package>

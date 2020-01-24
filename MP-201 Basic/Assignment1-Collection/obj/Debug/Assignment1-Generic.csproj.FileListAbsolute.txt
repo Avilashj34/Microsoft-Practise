@@ -1,0 +1,2 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Generic.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1-Collection\obj\Debug\Assignment1-Generic.csproj.CoreCompileInputs.cache

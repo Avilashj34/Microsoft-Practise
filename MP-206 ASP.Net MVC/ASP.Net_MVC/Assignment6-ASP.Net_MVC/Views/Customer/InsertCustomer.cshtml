@@ -1,0 +1,76 @@
+﻿@model Assignment6_ASP.Net_MVC.Models.Customer
+@{
+    ViewBag.Title = "InsertCustomer";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        h2 {
+            text-align: center;
+            color: black;
+            
+        }
+        legend{
+            color:black;
+        }
+
+        
+    </style>
+</head>
+<body>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h2>Insert Customer Page</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+    <legend>Fill Customer Detail</legend>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model=>model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EmailID)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.EmailID)
+        @Html.ValidationMessageFor(model => model.EmailID)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.MobileNo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.MobileNo)
+        @Html.ValidationMessageFor(model => model.MobileNo)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Birthdate)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Birthdate)
+        @Html.ValidationMessageFor(model => model.Birthdate)
+    </div>
+    <p>
+        <input type="submit" value="Create"/>
+    </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List","Index")
+</div>
+</body>
+
+</html>

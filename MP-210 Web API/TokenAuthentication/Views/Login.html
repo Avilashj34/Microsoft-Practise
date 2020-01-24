@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('btngooglelogin').click(function () {
+                window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=https%3A%2F%2Flocalhost%3A44350%2FLogin.html%2fLogin.html&state=GerGr5JlYx4t_KpsK57GFSxVueteyBunu02xJTak5m01";
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btngooglelogin" value="Google Login"/>
+</body>
+</html>

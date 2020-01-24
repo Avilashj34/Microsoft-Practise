@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+}
+
+<h2>AdminDashboard</h2>
+
+@{    
+    <div class="col-lg-8">
+        <div class="col-lg-10">
+            @Html.ActionLink("Add Product", "AddProduct","Product")
+        </div>
+        <div class="col-lg-10">
+            @Html.ActionLink("View Addded Product ", "ShowProduct", "Product")
+        </div>
+        <div class="col-lg-10">
+            @Html.ActionLink("View Ordered Product", "CustomerOrderProduct")
+        </div>
+
+        
+        
+    </div>    
+}
+

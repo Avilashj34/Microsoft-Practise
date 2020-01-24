@@ -1,0 +1,7 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\bin\Debug\Assignment1-AcessModifier.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\bin\Debug\Assignment1-AcessModifier.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\bin\Debug\Assignment1-AcessModifier.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\obj\Debug\Assignment1-AcessModifier.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\obj\Debug\Assignment1-AcessModifier.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\obj\Debug\Assignment1-AcessModifier.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\Assignment1\Assignment1-AcessModifier\obj\Debug\Assignment1-AcessModifier.csprojAssemblyReference.cache

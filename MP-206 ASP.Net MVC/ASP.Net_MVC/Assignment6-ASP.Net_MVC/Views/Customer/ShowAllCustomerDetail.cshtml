@@ -1,0 +1,87 @@
+﻿@model Assignment6_ASP.Net_MVC.Models.Customer
+
+@{
+    ViewBag.Title = "ShowAllCustomerDetail";
+}
+<html>
+<head>
+    <title>Show All Detail</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table th{
+            background-color : #3a6070;
+            color : #FFF;
+            padding : 4px 30px 4px 8px;
+        }
+        table td{
+            border: 1px solid #e3e3e3; 
+            padding: 4px;
+        }
+        table tr:nth-child(odd) td{
+            background-color: #e;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>ShowAllCustomerDetail</h2>
+    @Html.ActionLink("Create New", "InsertCustomer")
+
+    @ViewBag.Msg
+
+    <table cellpadding="100" border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Birthdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailID)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        @foreach (var c in Model.ShowallCustomer)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => c.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => c.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => c.MobileNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => c.Birthdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => c.EmailID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = c.CustomerID }) |
+
+                    @Html.ActionLink("Details", "ShowDetailById", new { search = c.CustomerID }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { id = c.CustomerID })
+
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+

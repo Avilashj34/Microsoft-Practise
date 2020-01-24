@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "EnterOtp";
+}
+
+<h2>EnterOtp</h2>
+
+Please Enter The OTP send to your mobile
+
+<div class="well">
+
+    <a class="btn btn-success" onclick="SendOTP()">Send OTP</a>
+
+</div>
+
+
+<script>
+    var SendOTP = function () {
+        $.ajax({
+            url: "/User/SendOtp",
+            type: "post",
+            success: function (data) {
+                console.log(data);
+                if (data == "success") {
+                    alert("OTP sent successfully");
+                    
+                }
+                else {
+                    alert("failed");
+                }
+            },            
+        });
+    }
+</script>
+
+

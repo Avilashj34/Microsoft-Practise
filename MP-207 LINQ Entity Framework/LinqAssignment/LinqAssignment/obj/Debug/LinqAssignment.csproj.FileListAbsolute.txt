@@ -1,0 +1,6 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\bin\Debug\LinqAssignment.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\bin\Debug\LinqAssignment.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\bin\Debug\LinqAssignment.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\obj\Debug\LinqAssignment.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\obj\Debug\LinqAssignment.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\LinqAssignment\obj\Debug\LinqAssignment.pdb

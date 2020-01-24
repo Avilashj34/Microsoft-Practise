@@ -1,0 +1,6 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\bin\Debug\ShowWeekDays.exe.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\bin\Debug\ShowWeekDays.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\bin\Debug\ShowWeekDays.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\obj\Debug\ShowWeekDays.exe
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\obj\Debug\ShowWeekDays.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\LinqAssignment\ShowWeekDays\obj\Debug\ShowWeekDays.csprojAssemblyReference.cache

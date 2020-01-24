@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankDbModelStoreContainer" CdmEntityContainer="BankDbEntities">
+    <EntitySetMapping Name="Loan_Account">
+      <EntityTypeMapping TypeName="BankDbModel.Loan_Account">
+        <MappingFragment StoreEntitySet="Loan_Account">
+          <ScalarProperty Name="Loan_AccountNo" ColumnName="Loan_AccountNo" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+          <ScalarProperty Name="Loan_Term" ColumnName="Loan_Term" />
+          <ScalarProperty Name="Loan_Int_Type" ColumnName="Loan_Int_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saving_Account">
+      <EntityTypeMapping TypeName="BankDbModel.Saving_Account">
+        <MappingFragment StoreEntitySet="Saving_Account">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

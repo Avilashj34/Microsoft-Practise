@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Loan_Account">
+    <Key>
+      <PropertyRef Name="Loan_AccountNo" />
+    </Key>
+    <Property Name="Loan_AccountNo" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="LoanAmount" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="Loan_Term" Type="Int32" />
+    <Property Name="Loan_Int_Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Saving_Account" Relationship="Self.Cust_Pkey1" FromRole="Loan_Account" ToRole="Saving_Account" />
+  </EntityType>
+  <EntityType Name="Saving_Account">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="Int32" Nullable="false" />
+    <Property Name="BranchCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentBalance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Loan_Account" Relationship="Self.Cust_Pkey1" FromRole="Saving_Account" ToRole="Loan_Account" />
+  </EntityType>
+  <Association Name="Cust_Pkey1">
+    <End Role="Saving_Account" Type="Self.Saving_Account" Multiplicity="0..1" />
+    <End Role="Loan_Account" Type="Self.Loan_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saving_Account">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Loan_Account">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BankDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Loan_Account" EntityType="Self.Loan_Account" />
+    <EntitySet Name="Saving_Account" EntityType="Self.Saving_Account" />
+    <AssociationSet Name="Cust_Pkey1" Association="Self.Cust_Pkey1">
+      <End Role="Saving_Account" EntitySet="Saving_Account" />
+      <End Role="Loan_Account" EntitySet="Loan_Account" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

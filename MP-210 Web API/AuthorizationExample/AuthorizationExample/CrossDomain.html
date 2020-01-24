@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cross-Domain eExample</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ulEmployees = $('#ulEmployees');
+            $('#btnGetEmployees').click(function () {
+                var UserName = $('#txtUserName').val();
+                var Password = $('#txtPassword').val();
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://localhost:44325/api/GetEmployee/',
+                    dataType: 'json',
+                    /*headers: {
+                        'Authorization ': 'Basic' + btoa(UserName + ':' + Password)
+                    }*/
+                    success: function (data) {
+                        ulEmployees.empty();
+                        $.each(data, function (index, val) {
+                            ulEmployees.append('<li> <b> Employee Id </b>- ' + val.id + ' <b> Name  </b>- ' + val.Name + ' <b> Designation  </b> - ' + val.Designation + " <b> :Location  </b>-" + val.Location + '</li>');
+                        });
+                    },
+
+                });
+            });
+            $('#btnClear').click(function () {
+                ulEmployees.empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Page</h1>
+    <div>
+        Enter Name : <input type="text" id="txtUserName" />
+        Enter Password : <input type="password" id="txtPassword" /> <br /><br />
+        <input id="btnGetEmployees" type="button" value="Get All Employees" />
+        <input id="btnClear" type="button" value="Clear" />
+        <ul id="ulEmployees" />
+    </div>
+</body>
+</html>

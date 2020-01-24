@@ -1,0 +1,17 @@
+﻿@model IEnumerable<int>
+
+@{
+    ViewBag.Title = "OrderAll";
+    int total = 0;
+}
+
+<h2>OrderAll</h2>
+
+@foreach (var item in Model)
+{    
+        total = total + item;    
+}
+
+The Total bill Amount is @total<br />&nbsp;
+Thank You For Shopping
+

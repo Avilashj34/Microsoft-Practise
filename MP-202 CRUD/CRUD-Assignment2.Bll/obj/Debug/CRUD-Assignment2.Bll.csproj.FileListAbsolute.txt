@@ -1,0 +1,15 @@
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.Bll.dll.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.Bll.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.Bll.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.DbModel.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\EntityFramework.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.DbModel.pdb
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\CRUD-Assignment2.DbModel.dll.config
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\EntityFramework.xml
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\obj\Debug\CRUD-Assignment2.Bll.csprojAssemblyReference.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\obj\Debug\CRUD-Assignment2.Bll.csproj.CoreCompileInputs.cache
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\obj\Debug\CRUD-Assignment2.Bll.csproj.CopyComplete
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\obj\Debug\CRUD-Assignment2.Bll.dll
+C:\Users\Avilash.Jha\Desktop\AssignmentSept\CRUD-Assignment2.Bll\obj\Debug\CRUD-Assignment2.Bll.pdb

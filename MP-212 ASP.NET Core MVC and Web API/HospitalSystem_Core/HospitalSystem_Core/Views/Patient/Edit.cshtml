@@ -1,0 +1,89 @@
+﻿@model HospitalSystem_Core.Models.Patients
+
+
+<div style="color:red">
+    @ViewBag.Message
+</div>
+
+<section class="content container-fluid">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Edit Patient Details</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" method="post" action="Edit">
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Name" value="@Model.Id" readonly="readonly">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Name" value="@Model.Name">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Phone" value="@Model.Phone" readonly="readonly">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputGender" class="col-sm-2 control-label">Gender</label>
+                    <div class="col-sm-10" style="padding-top:5px">
+                        @if (Model.Gender.Trim().ToLower() == "male")
+                        {<input type="radio" name="Gender" value="male" placeholder="Gender" checked> <i>Male</i>
+                            <input type="radio" name="Gender" value="female" placeholder="Gender"> <i>Female</i>
+                        }
+                        @if (Model.Gender.Trim().ToLower() == "female")
+                        {
+                            <input type="radio" name="Gender" value="male" placeholder="Gender"> <i>Male</i>
+                            <input type="radio" name="Gender" value="female" placeholder="Gender" checked> <i>Female</i>
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Health Condition</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Specialist" value="@Model.HealthCondition">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nurse Id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Specialist" value="@Model.NurseId" readonly="readonly" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Doctor Id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Specialist" value="@Model.DoctorId" readonly="readonly" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Created Time</label>
+                    <div class="col-sm-10">
+                        <input type="datetime" class="form-control" name="Specialist" value="@Model.CreatedTime" readonly="readonly" disabled>
+                    </div>
+                </div>
+            </div>            
+            <div class="box-footer">
+                <button type="submit" onclick="location.href='@Url.Action("GetPatientData","Patient")'" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info pull-right">Create</button>
+            </div>           
+        </form>
+    </div>
+    <!-- /.box -->
+</section>

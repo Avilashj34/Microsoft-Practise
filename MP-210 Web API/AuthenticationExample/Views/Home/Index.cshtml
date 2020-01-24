@@ -1,0 +1,84 @@
+﻿
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<h4> Registration Form</h4>
+<div id="loginDiv" style="width:50%">
+    <div style="width:50%">
+        <div class="form-group">
+            <label for="txtEmail">First Name </label>
+            <input type='email' name="email" id="txtEmail" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="textPwd" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Confrim Password</label>
+            <input type="password" id="txtConfirmPwd" class="form-control">
+        </div>
+    </div>
+    <button id="register" class="btn btn-default">Submit</button>
+</div>
+<h4>Login </h4>
+
+<div id="loginDiv" style="width:50%">
+    <div class="form-group">
+        <label for="txtEmail">First Name </label>
+        <input type='email' name="email" id="loginEmail" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="loginPwd" class="form-control">
+    </div>
+    <button id="btnLogin" class="btn btn-default">Submit</button>
+</div>
+<div>
+    <label id="msg"></label>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#register").on('click', function () {
+            var data = { Email: $("#txtEmail").val().trim(), Password: $("#textPwd").val().trim(), ConfirmPassword: $("#txtConfirmPwd").val().trim() };
+            $.ajax({
+                url: "http://localhost:44393/api/Account/Register",
+                type: 'POST',
+                data: data,
+                success: function (resp) {
+                    window.location.href = '/Home/Index';
+                }
+            })
+        });
+
+        $("#btnLogin").on('click', function () {
+            //var data = { Email: $("#loginEmail").val().trim(), Password: $("#textPwd").val().trim(), ConfirmPassword: $("#loginPwd").val().trim() };
+            $.ajax(
+                {
+                    url: "/TOKEN",
+                    type: "POST",
+                    data: $.param({ grant_type: 'password', username: $("#loginEmail").val(), password: $("#loginPwd").val() }),
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    success: function (resp) {
+                        sessionStorage.setItem('userName', resp.userName);
+                        sessionStorage.setItem('accessToken', resp.access_token);
+                        var authHeaders = {};
+                        authHeaders.Authorization = 'Bearer ' + resp.access_token;
+                        $.ajax({
+                            url: "http://localhost:44393/api/values",
+                            type: "GET",
+                            headers: authHeaders,
+                            success: function (response) {
+                                $("#loginEmail").val("");
+                                $("#loginPwd").val("");
+                                $("#msg").text(response);
+                            }
+                        });
+
+                    },
+                    error: function () {
+                        $("#msg").text("Authentication failed");
+                    }
+                })
+        });
+
+
+    })
+</script>

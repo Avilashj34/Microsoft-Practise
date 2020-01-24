@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ShoppingCart.Models.Product>
+
+@{
+    ViewBag.Title = "ShowProduct";
+    //@Html.ActionLink("Edit", "Edit", new { id = }) |
+}
+
+<h2>ShowProduct</h2>
+
+<div>
+    <h4>Product</h4>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductId);
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name);
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price);
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateTime);
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.DisplayFor(modelItem => item.DateTime)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                    
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<p>
+    
+    @Html.ActionLink("Back to List", "AdminDashboard","Home1")
+</p>
